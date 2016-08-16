@@ -1,0 +1,38 @@
+{
+  "name": "learnReact",
+  "version": "0.0.1",
+  "description": "Example Flux architecture.",
+  "main": "js/app.js",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "flux": "^2.1.1",
+    "keymirror": "^0.1.1",
+    "object-assign": "^4.1.0",
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "react-router": "^2.6.1"
+  },
+  "devDependencies": {
+    "browserify": "*",
+    "envify": "*",
+    "jest-cli": "*",
+    "reactify": "*",
+    "uglify-js": "*",
+    "watchify": "*"
+  },
+  "scripts": {
+    "start": "watchify -o js/bundle.js -v -d js/app.js",
+    "build": "browserify . -t [envify --NODE_ENV production] | uglifyjs -cm > js/bundle.min.js",
+    "test": "jest"
+  },
+  "author": "Bill Fisher",
+  "browserify": {
+    "transform": [
+      "reactify",
+      "envify"
+    ]
+  },
+  "jest": {
+    "rootDir": "./js"
+  }
+}
