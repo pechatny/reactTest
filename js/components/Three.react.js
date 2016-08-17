@@ -20,7 +20,7 @@ var Three = React.createClass({
                                 <input name="email" id="email" value="" placeholder="Email" type="email"/>
                             </div>
                             <div className="12u$">
-                                <textarea name="message" id="message" placeholder="Message" rows="6">123</textarea>
+                                <textarea name="message" id="message" placeholder="Message" rows="6" />
                             </div>
                             <div className="12u$">
                                 <ul className="actions">

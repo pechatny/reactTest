@@ -9,6 +9,7 @@ var Three = require('./components/Three.react');
 var { Router,
 	Route,
 	IndexRoute,
+	hashHistory,
 	IndexLink,
 	Link } = ReactRouter;
 
@@ -16,7 +17,7 @@ var { Router,
 var Main = React.createClass({
 	render: function(){
 		return	(
-			<Router>
+			<Router history={hashHistory}>
 				<Route path="/" component={App}>
 					<IndexRoute component={One}/>
 					<Route path="generic" component={Two} />
